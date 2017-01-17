@@ -30,7 +30,7 @@ Let Graeme Norman know or add an issue to the repo - [ten_angular2](https://gith
 
 ## Our own documentation
 
-* Coming soon from Confluence...
+* [Front end architecture documentation](https://tenproduct.atlassian.net/wiki/display/TP/The+future+of+Ten+front+end+architecture)
 
 ## Links / Resources
 
