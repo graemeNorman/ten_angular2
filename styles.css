@@ -1,0 +1,10 @@
+
+.row {
+    margin: 0 0 15px;
+}
+
+[class*="col-"] {
+    background-color: #fcfcfc;
+    box-shadow: 1px 1px 1px 1px #cfcfcf;
+}
+
