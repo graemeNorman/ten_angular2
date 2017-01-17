@@ -10,16 +10,12 @@ At the moment we are running with:
 * SASS
 * Typescript
 * Bootstrap (v4 - latest :+1:)
-  ** Flexbox
 * Browserify
 
 With a view to also introduce:
 * React
 * Theme switching
-* More gulp components
-  ** minify
-  ** Concat
-  ** rename
+* More gulp components (minify / concat / rename)
 * Dependency Injection
 * Webpack
 
