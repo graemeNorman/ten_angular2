@@ -1,18 +1,21 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-          <li><a routerLink="/about" routerLinkActive="active">About</a></li>
-        </ul>
-      </div>
+
+  <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse mb-4">
+    <a class="navbar-brand" href="#">Ten Product</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li>
+          <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+        </li>
+        <li>
+          <a class="nav-link"routerLink="/about" routerLinkActive="active">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <!-- routing here -->
+      <router-outlet></router-outlet>
     </div>
   </div>
-</nav>
-<div class="container">
-  <div class="row">
-    <!-- routing here -->
-    <router-outlet></router-outlet>
-  </div>
-</div>

@@ -7,6 +7,6 @@ import {Component} from '@angular/core';
 export class AboutComponent {
     welcome : string;
     constructor(){
-        this.welcome = "Welcome to about page"
+        this.welcome = "Template Demo 2"
     };
 };

@@ -1,3 +1,6 @@
 .idea/
+app/transpiled-js
 app/transpiled-js/**/*
 /node_modules
+/css
+/css/**/*
