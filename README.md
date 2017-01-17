@@ -5,23 +5,23 @@ Demo micro-site to play around with Angular 2 and going forward React concepts r
 ## What tech is in here?
 
 At the moment we are running with:
-1. Angular 2
-2. Gulp
-3. SASS
-4. Typescript
-5. Bootstrap (v4 - latest :+1:)
-* Flexbox
-6. Browserify
+* Angular 2
+* Gulp
+* SASS
+* Typescript
+* Bootstrap (v4 - latest :+1:)
+  ** Flexbox
+* Browserify
 
 With a view to also introduce:
-1. React
-2. Theme switching
-3. More gulp components
-* minify
-* Concat
-* rename
-4. Dependency Injection
-5. Webpack
+* React
+* Theme switching
+* More gulp components
+  ** minify
+  ** Concat
+  ** rename
+* Dependency Injection
+* Webpack
 
 ## How to use?
 
