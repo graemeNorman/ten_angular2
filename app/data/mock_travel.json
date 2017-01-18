@@ -1,0 +1,101 @@
+[
+  {
+    "module": "travel",
+    "body": "Where to shape up while winding down",
+    "url": "travel/travel-article/healty-holidays/",
+    "label": "Read more",
+    "image": "holidays.jpg",
+    "header": "Healthy holidays",
+    "size": 4
+  },
+  {
+    "module": "travel",
+    "body": "At your beck and call",
+    "url": "travel/travel-article/extraordinary-hotel-butlers-and-concierges-around/",
+    "label": "Read more",
+    "image": "holidays.jpg",
+    "header": "Extraordinary hotel butlers and concierges around",
+    "size": 2
+  },
+  {
+    "module": "travel",
+    "body": "Introduce your children to new cultures with an adventurous family getaway",
+    "url": "travel/travel-article/eye-opening-family-holidays/",
+    "label": "Read more",
+    "image": "holidays.jpg",
+    "header": "Eye-opening family holidays",
+    "size": 2
+  },
+  {
+    "module": "travel",
+    "body": "",
+    "url": "travel/travel-article/ten-travel/",
+    "label": "Read more",
+    "image": "holidays.jpg",
+    "header": "We provide our members with access to online booking, fantastic rates, destination guides and carefully curated recommendations 24/7",
+    "size": 4
+  },
+  {
+    "module": "travel",
+    "body": "",
+    "url": "travel/travel-article/presenting-our-global-hotel-collection/",
+    "label": "More information",
+    "image": "holidays.jpg",
+    "header": "Presenting our Global Hotel Collection. Enjoy upgrades, complimentary breakfasts, wi-fi, flexible check-in and check-out and more at great hotels around the world",
+    "size": 4
+  },
+  {
+    "module": "travel",
+    "body": "",
+    "url": "travel/travel-article/europes-best-beach-clubs/",
+    "label": "Read more",
+    "image": "holidays.jpg",
+    "header": "Europe's best beach clubs. Laid-back hangouts in the Mediterranean",
+    "size": 2
+  },
+  {
+    "module": "travel",
+    "body": "",
+    "url": "travel/travel-article/out-and-about-in-paris/",
+    "label": "Read more",
+    "image": "holidays.jpg",
+    "header": "Out and about in... Paris. We know France's capital inside out and can give you expert advice on the attractions worth seeing",
+    "size": 4
+  },
+  {
+    "module": "travel",
+    "body": "",
+    "url": "",
+    "label": "",
+    "image": "",
+    "header": "Book car hire through us to access great prices and added benefits including upgrades",
+    "size": 2
+  },
+  {
+    "module": "travel",
+    "body": "",
+    "url": "travel/travel-article/out-and-about-in-new-york/",
+    "label": "Read more",
+    "image": "holidays.jpg",
+    "header": "Out and about in... New York. The Big Apple has a bewildering amount of choice - here's our round-up of the must-see sights",
+    "size": 2
+  },
+  {
+    "module": "travel",
+    "body": "",
+    "url": "",
+    "label": "",
+    "image": "",
+    "header": "Ten's service is 24/7 and ABTA and ATOL bonded",
+    "size": 2
+  },
+  {
+    "module": "travel",
+    "body": "",
+    "url": "travel/travel-article/out-and-about-in-venice/",
+    "label": "Read more",
+    "image": "holidays.jpg",
+    "header": "Out and about in... Venice. The City of Bridges attracts romantics, art lovers and historians alike",
+    "size": 2
+  }
+]
