@@ -7,9 +7,11 @@ import {testDirective} from '../directives/form.directive';
     directives: [testDirective]
 })
 export class AboutComponent {
-    welcome : string;
+    theme1, theme2, theme3 : string;
     constructor(){
-        this.welcome = "Template Demo 2"
+        this.theme1 = "Light Theme",
+        this.theme2 = "Dark Theme",
+        this.theme3 = "Luxurious Theme"
     };
 };
 
