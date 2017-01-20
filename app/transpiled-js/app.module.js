@@ -8,6 +8,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var app_component_1 = require("./app.component");
+var home_component_1 = require("./home/home.component");
+var about_component_1 = require("./about/about.component");
+var cards_component_1 = require("./cards/cards.component");
+var app_routing_1 = require("./app.routing");
+// Directives
+var form_directive_1 = require("./directives/form.directive");
+var setting_service_1 = require("./setting.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -15,9 +22,10 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule],
-        declarations: [app_component_1.AppComponent],
-        bootstrap: [app_component_1.AppComponent] // root component to bootstarp
+        imports: [platform_browser_1.BrowserModule, app_routing_1.routing],
+        providers: [setting_service_1.SettingService],
+        declarations: [app_component_1.AppComponent, home_component_1.HomeComponent, about_component_1.AboutComponent, cards_component_1.CardsComponent, form_directive_1.testDirective],
+        bootstrap: [app_component_1.AppComponent] // root component to bootstrap
     })
 ], AppModule);
 exports.AppModule = AppModule;
