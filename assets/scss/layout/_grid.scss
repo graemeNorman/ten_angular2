@@ -1,0 +1,65 @@
+.page__container {
+  width: 100%;
+}
+
+
+/*
+    GRID
+ */
+
+// 20px gutter
+.gutter-20.row {
+  margin: 0px;
+  //margin-left: -10px;
+}
+.gutter-20 > [class^="col-"], .gutter-20 > [class^=" col-"] {
+  padding: 10px;
+  //padding-left: 10px;
+
+  .module {
+    background-color: #fcfcfc;
+    //box-shadow: 0px 1px 1px 1px $border-colour;
+    padding: 10px;
+  }
+}
+
+
+// 10px gutter
+.gutter-10.row {
+  margin-right: -5px;
+  margin-left: -5px;
+}
+.gutter-10 > [class^="col-"], .gutter-10 > [class^=" col-"] {
+  background-color: #fcfcfc;
+  //box-shadow: 1px 1px 1px 1px $border-colour;
+  padding-right: 5px;
+  padding-left: 5px;
+
+  .module {
+    padding: 10px;
+  }
+}
+
+
+// 0px gutter
+.gutter-0.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+.gutter-0 > [class^="col-"], .gutter-0 > [class^=" col-"]{
+  padding-right: 0;
+  padding-left: 0;
+}
+
+
+/*
+    CONTAINERS
+ */
+
+  .container {
+    margin: 20px auto 50px;
+  }
+
+  .card-columns {
+      column-count: 3;
+  }

@@ -1,0 +1,64 @@
+/***
+  THEMES - DARK THEME
+***/
+
+.article__teaser--dark {
+
+  [class*="article-"] {
+
+    img {
+      border-radius: 7px 7px 0 0;
+    }
+    .content {
+      background: #060F44;
+      border-radius: 0 0 7px 7px;
+      padding: 10px 45px 10px 10px;
+
+      .favourite {
+        background: #fff;
+        border-radius: 50%;
+        color: #2A89B1;
+        height: 33px;
+        width: 33px;
+        display: inline-block;
+        padding: 0px 8px;
+        font-size: 30px;
+        position: absolute;
+        bottom: 51%;
+        right: 8%;
+      }
+      h1 {
+        color: #fff;
+        font-size: 28px;
+        padding: 15px 0;
+      }
+      p {
+        color: #fff;
+        font-size: 16px;
+        line-height: 20px;
+      }
+      button {
+        background: #060F44;
+        border: 2px solid #fff;
+        color: #fff;
+        margin: 15px 0 0;
+      }
+    }
+  }
+
+  .article-md {
+    .content {
+      .favourite {
+        bottom: 36%;
+      }
+    }
+  }
+  .article-lg {
+    .content {
+      .favourite {
+        bottom: 26%;
+      }
+    }
+  }
+
+}

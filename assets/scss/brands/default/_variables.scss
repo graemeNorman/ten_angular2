@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+// The key to this stage is in using the !default flag after the variable declarations.
+// Doing this allows you to overwrite them within the theme .scss files
+
+
+// Colors
+$black: #000;
+$white: #fff;
+$red: #e2061c;
+$gray: #838282;
+$gray-light: #c9c8c8;
+$gray-dark: #333333;
+$blue: #253652;
+
+// Corp-Colors
+$brand-primary-colour: lightgrey !default;
+$brand: default !default;
+$border-demo: green !default;
+
+$corp-color: $blue !default;
+$corp-color-dark: darken($corp-color, 15%) !default;
+$corp-color-second: $red !default;
+$corp-color-second-dark: darken($corp-color-second, 15%) !default;
+
+// Font
+$base-font-size: 16px !default;
+$base-font-family: Helvetica, Arial, Sans-Serif !default;
+$base-font-color: $gray-dark !default;
+
+// Border
+$base-border-radius: 2px !default;
+$rounded-border-radius: 50% !default;
+$base-border-color: $gray !default;
+
+// Mixins
+@import "../../mixins/_animations",
+        "../../mixins/_px-rem";

@@ -1,0 +1,8 @@
+@charset 'UTF-8';
+
+// 1. Import basic theme
+@import '../../../application';
+// 2. Import override themes (modern / dark / luxury)
+@import "../../../themes/components-modern/**/*";
+@import "../../../themes/components-dark/**/*";
+@import "../../../themes/components-luxury/**/*";

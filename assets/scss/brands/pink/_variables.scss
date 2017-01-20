@@ -1,0 +1,36 @@
+@charset 'UTF-8';
+
+// 1. Import basic theme
+@import '../../base/config';
+
+//$theme: luxury;
+
+// Colors
+$black: #000;
+$white: #fff;
+$red: #e2061c;
+$gray: #838282;
+$gray-light: #c9c8c8;
+$gray-dark: #333333;
+$blue: #253652;
+
+// 1.Overwrite stuff
+$brand-primary-colour: hotpink;
+$brand: pink;
+
+$corp-color: $gray;
+$corp-color-darken: darken($corp-color, 10%);
+$corp-color-second: $blue;
+$corp-color-second-dark: darken($corp-color-second, 10%);
+
+$base-font-size: 1.6;
+$base-font-family: "Comic Sans MS", cursive, sans-serif;
+
+$base-border-radius: 0px;
+$base-border-color: $gray-light;
+
+// Images
+$sprite:              '../../images/light/sprite.png';
+$colorbox-background: '../../images/light/colorbox-background.png';
+
+$accordion-bgcolor: $gray-light;
