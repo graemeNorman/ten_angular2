@@ -3,7 +3,7 @@ import {testDirective} from '../directives/form.directive';
 
 @Component({
     selector: 'app-cards',
-    templateUrl: './app/cards/cards.template.html',
+    templateUrl: './app/cards/cards.template.html'
 })
 export class CardsComponent {
     title : string;

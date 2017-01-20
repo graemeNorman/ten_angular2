@@ -1,7 +1,8 @@
 'use strict';
 
 var gulp        = require('gulp'),
-    sass        = require('gulp-sass');
+    sass        = require('gulp-sass'),
+    sassGlob    = require('gulp-sass-glob');
     // minifyCss   = require('gulp-minify-css'),
     // concat      = require('gulp-concat'),
     // rename      = require('gulp-rename');
@@ -9,7 +10,7 @@ var gulp        = require('gulp'),
 /*
     SASS DIRECTORY
  */
-var SCSS_SRC = ['assets/sass/**/*.scss'];
+var SCSS_SRC = ['assets/scss/**/*.scss'];
 
 
 /*
@@ -18,6 +19,7 @@ var SCSS_SRC = ['assets/sass/**/*.scss'];
 gulp.task('concatMinify', ['concatMinify:sass']);
 gulp.task('concatMinify:sass', function() {
 gulp.src(SCSS_SRC)
+    .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
     // .pipe(minifyCss())
     // .pipe(concat('style.css'))
