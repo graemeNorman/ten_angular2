@@ -1,0 +1,28 @@
+
+/*
+	PRIMARY COLORS
+*/
+  $ten-purple: #652D89;
+  $ten-red: #B1005C;
+  $ten-blue: #241031;
+  $ten-green: #2EB070;
+  $white: #FFFFFF;
+  $job-listing-bg: #241031;
+  $primary-colour: hotpink;
+  $border-colour: #cfcfcf;
+
+// 20px gutter
+.gutter-20.row {
+  margin: 0px;
+  //margin-left: -10px;
+}
+.gutter-20 > [class^="col-"], .gutter-20 > [class^=" col-"] {
+  padding: 10px;
+  //padding-left: 10px;
+
+  .module {
+    background-color: lightblue;
+    box-shadow: 1px 1px 1px 1px $border-colour;
+    padding: 10px;
+  }
+}

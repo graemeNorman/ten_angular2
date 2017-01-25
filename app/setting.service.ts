@@ -6,7 +6,9 @@ export class SettingService {
     return {
       primary_color: 'blue',
       font_size: '13px',
-      font_family: 'Helvetica'
+      font_family: 'Helvetica',
+      theme: 'modern',
+      brands: 'blue'
     };
   }
 }
