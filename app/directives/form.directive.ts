@@ -7,7 +7,10 @@ import {Component} from '@angular/core';
 })
 
 export class testDirective {
-    forename, surname, email, tel : string;
+    forename : string;
+    surname : string;
+    email : string;
+    tel : string;
     constructor(){
         this.forename = "Please enter your first name"
         this.surname = "Please enter your last name"

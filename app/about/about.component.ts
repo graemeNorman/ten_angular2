@@ -1,15 +1,26 @@
 import {Component} from '@angular/core';
-import {testDirective} from '../directives/form.directive';
+import { SettingService } from "../setting.service";
 
 @Component({
     selector: 'app-about',
     templateUrl: './app/about/about-template.html',
-    directives: [testDirective]
+    styleUrls: ['../css/about/about.css']
 })
 export class AboutComponent {
-    welcome : string;
-    constructor(){
-        this.welcome = "Template Demo 2"
+    theme1: string;
+    theme2: string;
+    theme3 : string;
+    settings: Object;
+    sett: Object;
+
+    constructor(private _settingService: SettingService){
+        this.theme1 = "Light Theme",
+        this.theme2 = "Dark Theme",
+        this.theme3 = "Luxury Theme";
+        this.settings = _settingService.getSettings();
+        this.sett = JSON.stringify(_settingService.getSettings());
     };
+
+
 };
 
