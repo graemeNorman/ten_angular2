@@ -10,11 +10,12 @@ import { routing } from "./app.routing";
 // Directives
 import { testDirective } from "./directives/form.directive";
 import { SettingService } from "./setting.service";
+import {EventComponent} from "./event/event.component";
 
 @NgModule({
   imports:      [ BrowserModule, routing ], //other modules the app depends on
   providers: [ SettingService ],
-  declarations: [ AppComponent, HomeComponent, AboutComponent, CardsComponent, testDirective ], // declare all directives and components
+  declarations: [ AppComponent, HomeComponent, AboutComponent, CardsComponent, EventComponent, testDirective ], // declare all directives and components
   bootstrap : [ AppComponent ] // root component to bootstrap
 })
 

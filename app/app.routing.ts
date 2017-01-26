@@ -4,11 +4,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component'; //import home components
 import { AboutComponent } from './about/about.component'; //import about components
 import { CardsComponent} from './cards/cards.component'; //import cards components
+import { EventComponent} from './event/event.component'; //import event components
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'cards', component: CardsComponent },
+  { path: 'events', component: EventComponent },
   { path: '', component: HomeComponent, pathMatch: 'full'} // redirect to home page on load
 ];
 
