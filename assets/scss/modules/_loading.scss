@@ -1,0 +1,91 @@
+
+.loading {
+  background: #628CB0;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  transition: opacity .5s ease-in-out;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+
+  .loader-container {
+    background: #ffffff;
+    border-radius: 50%;
+    height: 250px;
+    left: 41%;
+    position: fixed;
+    top: 39%;
+    width: 250px;
+
+    .loader {
+      animation: loader 5s cubic-bezier(.8,0,.2,1) infinite;
+      height: 40px;
+      width: 41px;
+      position: absolute;
+      top:calc(50% - 20px);
+      left:calc(50% - 20px);
+
+      .top {
+        animation: top 5s linear infinite;
+        border-top: 20px solid #628CB0;
+        border-right: 20px solid transparent;
+        border-left: 20px solid transparent;
+        height: 0px;
+        width: 1px;
+        transform-origin: 50% 100%;
+      }
+      .bottom {
+        animation: bottom 5s linear infinite;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid #628CB0;
+        border-left: 20px solid transparent;
+        height: 0px;
+        width: 1px;
+        transform: scale(0);
+        transform-origin: 50% 100%;
+      }
+      .line {
+        animation: line 5s linear infinite;
+        border-left: 1px dotted #628CB0;
+        height: 0px;
+        width: 0px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+      }
+    }
+  }
+
+}
+
+my-app:empty + .loading {
+    opacity: 1;
+    z-index: 100;
+}
+
+/**
+  Keyframe Animations
+**/
+
+@keyframes loader {
+  90% { transform: rotate(0deg); }
+  100% { transform: rotate(180deg); }
+}
+
+@keyframes top {
+  90% { transform: scale(0); }
+  100% { transform: scale(0);}
+}
+
+@keyframes bottom {
+  10% { transform: scale(0); }
+  90% { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes line {
+  10% { height: 20px; }
+  100% { height: 20px; }
+}
