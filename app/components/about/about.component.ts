@@ -4,7 +4,7 @@ import { SettingService } from "../../setting.service";
 @Component({
     selector: 'app-about',
     templateUrl: './app/components/about/about-template.html',
-    styleUrls: ['../css/about/about.css']
+    styleUrls: ['./css/components/about/about.css']
 })
 
 export class AboutComponent {

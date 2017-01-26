@@ -4,7 +4,7 @@ import { SettingService } from "../../setting.service";
 @Component({
     selector: 'app-event',
     templateUrl: './app/components/event/event-template.html',
-    styleUrls: ['../css/event/event.css']
+    styleUrls: ['./css/components/event/event.css']
 })
 
 export class EventComponent {

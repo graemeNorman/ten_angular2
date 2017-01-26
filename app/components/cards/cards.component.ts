@@ -4,7 +4,7 @@ import {Component} from '@angular/core';
 @Component({
     selector: 'app-cards',
     templateUrl: './app/components/cards/cards.template.html',
-    styleUrls: ['../css/cards/cards.css']
+    styleUrls: ['./css/components/cards/cards.css']
 })
 export class CardsComponent {
     title : string;
