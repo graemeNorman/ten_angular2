@@ -1,12 +1,13 @@
 import {Component} from '@angular/core';
-import { SettingService } from "../setting.service";
+import { SettingService } from "../../setting.service";
 
 @Component({
-    selector: 'app-about',
-    templateUrl: './app/about/about-template.html',
-    styleUrls: ['../css/about/about.css']
+    selector: 'app-event',
+    templateUrl: './app/components/event/event-template.html',
+    styleUrls: ['../css/event/event.css']
 })
-export class AboutComponent {
+
+export class EventComponent {
     theme1: string;
     theme2: string;
     theme3 : string;
@@ -20,7 +21,6 @@ export class AboutComponent {
         this.settings = _settingService.getSettings();
         this.sett = JSON.stringify(_settingService.getSettings());
     };
-
 
 };
 
