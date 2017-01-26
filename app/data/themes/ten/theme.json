@@ -1,0 +1,10 @@
+{
+  "string": "ten",
+  "boolean": true,
+  "number": 1.23,
+  "array": [1, 2, 3],
+  "object": {
+    "foo": "bar"
+  },
+  "null": null
+}
