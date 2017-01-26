@@ -1,13 +1,13 @@
 import {Component} from '@angular/core';
-import { SettingService } from "../setting.service";
+import { SettingService } from "../../setting.service";
 
 @Component({
-    selector: 'app-event',
-    templateUrl: './app/event/event-template.html',
-    styleUrls: ['../css/event/event.css']
+    selector: 'app-about',
+    templateUrl: './app/components/about/about-template.html',
+    styleUrls: ['../css/about/about.css']
 })
 
-export class EventComponent {
+export class AboutComponent {
     theme1: string;
     theme2: string;
     theme3 : string;

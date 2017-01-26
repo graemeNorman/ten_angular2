@@ -1,10 +1,10 @@
 import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './home/home.component'; //import home components
-import { AboutComponent } from './about/about.component'; //import about components
-import { CardsComponent} from './cards/cards.component'; //import cards components
-import { EventComponent} from './event/event.component'; //import event components
+import { HomeComponent } from './components/home/home.component'; //import home components
+import { AboutComponent } from './components/about/about.component'; //import about components
+import { CardsComponent} from './components/cards/cards.component'; //import cards components
+import { EventComponent} from './components/event/event.component'; //import event components
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
