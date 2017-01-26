@@ -1,0 +1,5 @@
+@import "../../scss/theme";
+
+.theme_light {
+  color: map-get($theme, 'primary-color')
+}

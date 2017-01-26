@@ -1,0 +1,374 @@
+///** Resset CSS - http://meyerweb.com/eric/tools/css/reset/
+//   v2.0 | 20110126
+//**/
+//  html, body, div, span, applet, object, iframe,
+//  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+//  a, abbr, acronym, address, big, cite, code,
+//  del, dfn, em, img, ins, kbd, q, s, samp,
+//  small, strike, strong, sub, sup, tt, var,
+//  b, u, i, center,
+//  dl, dt, dd, ol, ul, li,
+//  fieldset, form, label, legend,
+//  table, caption, tbody, tfoot, thead, tr, th, td,
+//  article, aside, canvas, details, embed,
+//  figure, figcaption, footer, header, hgroup,
+//  menu, nav, output, ruby, section, summary,
+//  time, mark, audio, video {
+//    margin: 0;
+//    padding: 0;
+//    border: 0;
+//    font-family: $base-font-family;
+//    font-size: 62.5%;
+//    font: inherit;
+//    vertical-align: baseline;
+//  }
+//  /* HTML5 display-role reset for older browsers */
+//  article, aside, details, figcaption, figure,
+//  footer, header, hgroup, menu, nav, section {
+//    display: block;
+//  }
+//  body {
+//    line-height: 1;
+//  }
+//  ol, ul {
+//    list-style: none;
+//  }
+//  blockquote, q {
+//    quotes: none;
+//  }
+//  blockquote:before, blockquote:after,
+//  q:before, q:after {
+//    content: '';
+//    content: none;
+//  }
+//  table {
+//    border-collapse: collapse;
+//    border-spacing: 0;
+//  }
+
+//  @font-face {
+//      font-family: 'Gotham Bold';
+//      src: url("../../fonts/Gotham/GothamBold.otf") format("opentype");
+//  }
+//  @font-face {
+//      font-family: 'Gotham Book';
+//      src: url("../../fonts/Gotham/GothamBook.otf") format("opentype");
+//  }
+//  @font-face {
+//      font-family: 'Gotham Light';
+//      src: url("../../fonts/Gotham/GothamLight.otf") format("opentype");
+//  }
+//  @font-face {
+//      font-family: 'Gotham Medium';
+//      src: url("../../fonts/Gotham/GothamMedium.otf") format("opentype");
+//  }
+//
+//  @font-face {
+//      font-family: 'Gotham Regular';
+//      src: url("../../fonts/Gotham/GothamRegular.otf") format("opentype");
+//  }
+//  @font-face {
+//      font-family: 'Gotham Thin';
+//      src: url("../../fonts/Gotham/GothamThin.otf") format("opentype");
+//  }
+//
+///*
+//	TYPOGRAPHY
+//*/
+//  h1, h2, h3, h4, h5, h6, p, a, ul {
+//    //font-family: 'Gotham Medium';
+//    -webkit-font-smoothing: antialiased;
+//  }
+//
+//  h1 {
+//    font-size: 22px;
+//    line-height:  28px;
+//  }
+//
+//  h2 {
+//    font-size: 16px;
+//    line-height:  26px;
+//  }
+//
+//  p {
+//    font-size: 14px;
+//    line-height:  20px;
+//  }
+
+/*
+	PRIMARY COLORS
+*/
+  $ten-purple: #652D89;
+  $ten-red: #B1005C;
+  $ten-blue: #241031;
+  $ten-green: #2EB070;
+  $white: #FFFFFF;
+  $job-listing-bg: #241031;
+  $primary-colour: hotpink;
+  $border-colour: #cfcfcf;
+
+
+/*
+    GRID
+ */
+
+// 20px gutter
+.gutter-20.row {
+  margin: 0px;
+  //margin-left: -10px;
+}
+.gutter-20 > [class^="col-"], .gutter-20 > [class^=" col-"] {
+  padding: 10px;
+  //padding-left: 10px;
+
+  //img {
+  //      box-shadow: 1px 0 1px 1px $border-colour;
+  //}
+
+  .module {
+    background-color: #fcfcfc;
+    //box-shadow: 0px 1px 1px 1px $border-colour;
+    padding: 10px;
+  }
+}
+// 10px gutter
+.gutter-10.row {
+  margin-right: -5px;
+  margin-left: -5px;
+}
+.gutter-10 > [class^="col-"], .gutter-10 > [class^=" col-"] {
+  background-color: #fcfcfc;
+  //box-shadow: 1px 1px 1px 1px $border-colour;
+  padding-right: 5px;
+  padding-left: 5px;
+
+  .module {
+    padding: 10px;
+  }
+}
+// 0px gutter
+.gutter-0.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+.gutter-0 > [class^="col-"], .gutter-0 > [class^=" col-"]{
+  padding-right: 0;
+  padding-left: 0;
+}
+
+
+/*
+    CONTAINERS
+ */
+
+  .container {
+    margin: 20px auto 50px;
+  }
+
+  .card-columns {
+      column-count: 3;
+  }
+
+
+
+/***
+  THEMES - GENERIC
+***/
+[class^="theme_"] {
+  border: 1px solid #cfcfcf;
+  margin: 20px auto 50px;
+
+  h1 {
+    padding: 10px;
+  }
+}
+
+
+/***
+  THEMES - LIGHT THEME
+***/
+
+.theme_light {
+
+  [class*="article-"] {
+
+    img {
+      border-radius: 7px 7px 0 0;
+    }
+    .content {
+      background: #f2f2f2;
+      border-radius: 0 0 7px 7px;
+      padding: 10px 45px 10px 10px;
+
+      .favourite {
+        background: #fff;
+        border-radius: 50%;
+        color: #2A89B1;
+        height: 33px;
+        width: 33px;
+        display: inline-block;
+        padding: 0px 8px;
+        font-size: 30px;
+        position: absolute;
+        top: 5%;
+        right: 8%;
+      }
+      h1 {
+        color: #1075A4;
+        font-size: 28px;
+        padding: 15px 0;
+      }
+      p {
+        color: #333;
+        font-size: 16px;
+        line-height: 20px;
+      }
+      button {
+        background: #1075A4;
+        color: #fff;
+        margin: 15px 0 0;
+      }
+    }
+  }
+}
+
+/***
+  THEMES - DARK THEME
+***/
+
+.theme_dark {
+
+  [class*="article-"] {
+
+    img {
+      border-radius: 7px 7px 0 0;
+    }
+    .content {
+      background: #060F44;
+      border-radius: 0 0 7px 7px;
+      padding: 10px 45px 10px 10px;
+
+      .favourite {
+        background: #fff;
+        border-radius: 50%;
+        color: #2A89B1;
+        height: 33px;
+        width: 33px;
+        display: inline-block;
+        padding: 0px 8px;
+        font-size: 30px;
+        position: absolute;
+        bottom: 51%;
+        right: 8%;
+      }
+      h1 {
+        color: #fff;
+        font-size: 28px;
+        padding: 15px 0;
+      }
+      p {
+        color: #fff;
+        font-size: 16px;
+        line-height: 20px;
+      }
+      button {
+        background: #060F44;
+        border: 2px solid #fff;
+        color: #fff;
+        margin: 15px 0 0;
+      }
+    }
+  }
+  .article-md {
+    .content {
+      .favourite {
+        bottom: 36%;
+      }
+    }
+  }
+  .article-lg {
+    .content {
+      .favourite {
+        bottom: 26%;
+      }
+    }
+  }
+
+}
+
+/***
+  THEMES - LUXRY THEME
+***/
+
+.theme_luxury {
+
+  [class*="article-"] {
+    background: url("../../../assets/images/taylor-swift.jpg") no-repeat 0 0;
+    background-size: cover;
+    min-height: 350px;
+    border: 10px solid #fff;
+    border-radius: 7px;
+
+    img {
+      display: none;
+      border-radius: 7px 7px 0 0;
+    }
+    .favourite {
+      background: #fff;
+      border-radius: 50%;
+      color: #2A89B1;
+      height: 33px;
+      width: 33px;
+      display: inline-block;
+      padding: 0px 8px;
+      font-size: 30px;
+      position: absolute;
+      left: 5%;
+    }
+    .content {
+      border-radius: 0 0 7px 7px;
+      padding: 10px 45px 10px 10px;
+      position: absolute;
+      bottom: 0;
+
+      h1 {
+        color: #fff;
+        font-size: 28px;
+        padding: 15px 0;
+      }
+      p {
+        color: #fff;
+        font-size: 16px;
+        line-height: 20px;
+      }
+      a.button {
+        background: transparent;
+        border-bottom: 2px solid #fff;
+        border-radius: 0;
+        color: #fff;
+        display: inline-block;
+        font-family: sans-serif;
+        margin: 15px 0 0;
+        padding: 24px 12px 2px 12px;
+        position: relative;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .article-md {
+    .content {
+      a.button {
+        font-size: 16px;
+      }
+    }
+  }
+  .article-lg {
+    .content {
+      a.button {
+        font-size: 20px;
+      }
+    }
+  }
+
+}
+
