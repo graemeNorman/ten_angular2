@@ -6,6 +6,7 @@ import { SettingService } from "../setting.service";
     templateUrl: './app/about/about-template.html',
     styleUrls: ['../css/about/about.css']
 })
+
 export class AboutComponent {
     theme1: string;
     theme2: string;
@@ -20,7 +21,6 @@ export class AboutComponent {
         this.settings = _settingService.getSettings();
         this.sett = JSON.stringify(_settingService.getSettings());
     };
-
 
 };
 

@@ -1,1 +1,25 @@
 @import "about-import";
+//@import "../../assets/scss/mixins/map-deep-get";
+
+.comp__cards {
+
+  .card_container {
+
+    .content {
+      font-size: 14px;
+      padding: 15px 10px;
+
+      img {
+        object-fit: contain;
+        padding: 0 0 10px;
+        width: 100%;
+      }
+      p {
+        padding: 8px 0;
+      }
+
+    }
+
+  }
+
+}
