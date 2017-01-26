@@ -1,8 +1,8 @@
 $theme: (
     theme: modern,
         colours: (
-            one: #cfcfcf, // 16a085
-            two: #2980b9,
+            one: #f2f2f2,
+            two: #333333,
             three: #27ae60,
             light: #ffffff,
             dark: #000000
@@ -36,10 +36,5 @@ $theme: (
             primary: 5px,
             secondary: 10px,
             tertiary: 15px,
-        ),
-        line-height: (
-            primary: 14px,
-            secondary: 18px,
-            tertiary: 22px,
         )
 )
