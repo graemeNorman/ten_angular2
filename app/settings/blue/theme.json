@@ -1,0 +1,17 @@
+[
+  {
+    "client": "blue",
+    "theme": "modern",
+    "font_size": "13px",
+    "font_family": "Helvetica",
+	"colours":
+		[
+			{
+              "primary": "lightblue",
+              "secondary": "blue",
+              "tertiary": "orange"
+            }
+		]
+
+  }
+]

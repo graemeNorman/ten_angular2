@@ -1,10 +1,13 @@
-import {Component} from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 import { SettingService } from "../../setting.service";
+import globalSettings = require('../../settings/globals');
+
 
 @Component({
     selector: 'app-event',
     templateUrl: './app/components/event/event-template.html',
-    styleUrls: ['./css/components/event/event.css']
+    styleUrls: ['./css/components/event/event.css'],
+    encapsulation: ViewEncapsulation.Native
 })
 
 export class EventComponent {
