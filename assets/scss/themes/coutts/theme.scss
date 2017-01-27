@@ -1,0 +1,45 @@
+$theme: (
+  brand: coutts,
+  colours: (
+    one: #cfcfcf,
+    two: #2980b9,
+    three: #27ae60,
+    light: #ffffff,
+    dark: #000000
+  ),
+  border-radius: (
+    primary: 0,
+    secondary: 5px,
+    tertiary: 10px
+  ),
+  text-align: (
+    primary: left,
+    secondary: center,
+    tertiary: right
+  ),
+  font: (
+    primary: Tahoma,
+    secondary: Arial,
+    tertiary: monospace
+  ),
+  txt-size: (
+    primary: 12px,
+    secondary: 14px,
+    tertiary: 16px
+  ),
+  header-size: (
+    primary: 24px,
+    secondary: 20px,
+    tertiary: 18px
+  ),
+  padding: (
+    primary: 5px,
+    secondary: 10px,
+    tertiary: 15px
+  ),
+  line-height: (
+    primary: 14px,
+    secondary: 18px,
+    tertiary: 22px
+  )
+);

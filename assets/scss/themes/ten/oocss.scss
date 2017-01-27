@@ -1,7 +1,5 @@
-@import "../theme";
-//@import "../theme1";
-
-@import "../mixins/map-deep-get";
+@import "./theme";
+@import "../../mixins/map-deep-get";
 
 .bg-one    {background: map-deep-get($theme, 'colours', 'one');}
 .bg-two    {background: map-deep-get($theme, 'colours', 'two');}

@@ -1,0 +1,45 @@
+$theme: (
+  brand: ten,
+  colours: (
+    one: lightblue,
+    two: hotpink,
+    three: lightsalmon,
+    light: #ffffff,
+    dark: #000000
+  ),
+  border-radius: (
+    primary: 0,
+    secondary: 5px,
+    tertiary: 10px
+  ),
+  text-align: (
+    primary: left,
+    secondary: center,
+    tertiary: right
+  ),
+  font: (
+    primary: monospace,
+    secondary: Arial,
+    tertiary: Tahoma
+  ),
+  txt-size: (
+    primary: 14px,
+    secondary: 16px,
+    tertiary: 18px
+  ),
+  header-size: (
+    primary: 32px,
+    secondary: 28px,
+    tertiary: 24px
+  ),
+  padding: (
+    primary: 5px,
+    secondary: 10px,
+    tertiary: 15px
+  ),
+  line-height: (
+    primary: 16px,
+    secondary: 20px,
+    tertiary: 24px
+  )
+);
