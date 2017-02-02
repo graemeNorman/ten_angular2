@@ -1,4 +1,6 @@
 
+
+
   <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse mb-4">
     <a class="navbar-brand" href="#">Ten Product</a>
     <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -22,7 +24,49 @@
   <div class="container">
     <div class="row">
 
-      <h1 style="font-size:36px;">Our current brand is <span style="color:orangered; text-transform: uppercase;">{{currentBrand}}</span></h1>
+      <h1 style="font-size:36px; width:100%;">Our current brand is <span style="color:orangered; text-transform: uppercase;">{{currentBrand}}</span></h1>
+
+      <h1 style="font-size:36px; width:100%;">Module switches configuration:</h1>
+      <ul style="font-size:24px; width:100%;">
+        <li>dining: <span style="color:green; font-weight:bold;">{{dining}}</span></li>
+        <li>entertainment: <span style="color:green; font-weight:bold;">{{entertainment}}</span></li>
+        <li>travel: <span style="color:green; font-weight:bold;">{{travel}}</span></li>
+        <li>events: <span style="color:green; font-weight:bold;">{{events}}</span></li>
+        <li>home: <span style="color:green; font-weight:bold;">{{home}}</span></li>
+      </ul>
+
+
+      <div *ngIf="dining">
+        <h1 style="font-size:36px; color:green; width:100%;">Display only if dining is turned on in settings</h1>
+      </div>
+
+<!--<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse mb-4">-->
+    <!--<a class="navbar-brand" href="#">Ten Product</a>-->
+    <!--<div class="collapse navbar-collapse" id="navbarCollapse">-->
+      <!--<ul class="navbar-nav mr-auto">-->
+        <!--<li>-->
+          <!--<a class="nav-link">Home</a>-->
+        <!--</li>-->
+        <!--<li *ngif="dining">-->
+          <!--<a class="nav-link">Dining</a>-->
+        <!--</li>-->
+        <!--<li *ngif="entertainment">-->
+          <!--<a class="nav-link">Entertainment</a>-->
+        <!--</li>-->
+        <!--<li *ngif="travel">-->
+          <!--<a class="nav-link">Travel</a>-->
+        <!--</li>-->
+        <!--<li *ngif="events">-->
+          <!--<a class="nav-link">Events &amp; Benefits</a>-->
+        <!--</li>-->
+        <!--<li *ngif="home">-->
+          <!--<a class="nav-link">Home &amp; Motor</a>-->
+        <!--</li>-->
+      <!--</ul>-->
+    <!--</div>-->
+  <!--</nav>-->
+
+
 
       <!-- routing here -->
       <router-outlet></router-outlet>

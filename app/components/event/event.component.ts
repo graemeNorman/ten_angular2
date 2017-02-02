@@ -1,7 +1,5 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 import { SettingService } from "../../setting.service";
-import globalSettings = require('../../settings/globals');
-
 
 @Component({
     selector: 'app-event',
