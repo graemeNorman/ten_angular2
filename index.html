@@ -1,26 +1,115 @@
+<!doctype html>
 <html>
-  <head>
-    <base href="/" />
-    <title>CipherTrick Application</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+	<meta charset="utf-8" />
+	<base href="/">
+	<title>
+		Creating A Pre-Bootstrap Loading Screen In Angular 2 RC 1
+	</title>
+
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/critical.css" />
-    <!-- 1. Load libraries -->
-     <!-- Polyfill(s) for older browsers -->
-    <script src="node_modules/core-js/client/shim.min.js"></script>
-    <script src="node_modules/zone.js/dist/zone.js"></script>
-    <script src="node_modules/reflect-metadata/Reflect.js"></script>
-    <script src="node_modules/systemjs/dist/system.src.js"></script>
-    <!-- 2. Configure SystemJS -->
-    <script src="systems.config.js"></script>
-    <script>
-      System.import('app').catch(function(err){ console.error(err); });
-    </script>
 
-  </head>
-  <!-- 3. Display the application -->
-  <body>
-    <app-root>Loading...</app-root>
-  </body>
+	<!-- Load libraries (including polyfill(s) for older browsers. -->
+	<script type="text/javascript" src="node_modules/core-js/client/shim.min.js"></script>
+	<script type="text/javascript" src="node_modules/zone.js/dist/zone.js"></script>
+	<script type="text/javascript" src="node_modules/reflect-metadata/Reflect.js"></script>
+	<script type="text/javascript" src="node_modules/systemjs/dist/system.src.js"></script>
+	<!-- Configure SystemJS loader. -->
+	<script type="text/javascript" src="systems.config.js"></script>
+</head>
+<body>
+
+	<app-root>
+		Loading...
+	</app-root>
+
+	<div id="pre-bootstrap-container">
+		<!--
+			In this approach, rather than putting the pre-bootstrap content inside
+			the <my-app> component content, we're leaving it external to the Angular 2
+			application entirely. Then, we're hooking into the bootstrap promise in
+			order to programmatically remove the pre-bootstrap content once the
+			application has bootstrapped. This gives us more fine-grained control over
+			how the pre-bootstrap content is removed.
+		-->
+
+		<script type="text/javascript">
+			// CAUTION: "bootstrapping" promise exposed by our System.js logic.
+			window.bootstrapping.then(
+				function handleResolve() {
+					var preBootstrapContainer = document.getElementById( "pre-bootstrap-container" );
+					var preBootstrap = document.getElementById( "pre-bootstrap" );
+					// Add the class-name to initiate the transitions.
+					preBootstrap.className = "loaded";
+					// Remove the bootstrap container after the transition has
+					// completed (based on the known transition time).
+					setTimeout(
+						function removeLoadingScreen() {
+							preBootstrapContainer
+								.parentNode
+									.removeChild( preBootstrapContainer )
+							;
+						},
+						300
+					);
+				}
+			);
+		</script>
+
+		<style type="text/css">
+			#pre-bootstrap {
+				background-color: #262626 ;
+				bottom: 0px ;
+				left: 0px ;
+				opacity: 1.0 ;
+				position: fixed ;
+				right: 0px ;
+				top: 0px ;
+				transition: all linear 300ms ;
+					-webkit-transition: all linear 300ms ;
+				z-index: 999999 ;
+			}
+			#pre-bootstrap.loaded {
+				opacity: 0.0 ;
+			}
+			#pre-bootstrap div.messaging {
+				color: #FFFFFF ;
+				font-family: monospace ;
+				left: 0px ;
+				margin-top: -37px ;
+				position: absolute ;
+				right: 0px ;
+				text-align: center ;
+				top: 50% ;
+			}
+			#pre-bootstrap h1 {
+				font-size: 26px ;
+				line-height: 35px ;
+				margin: 0px 0px 20px 0px ;
+			}
+			#pre-bootstrap p {
+				font-size: 18px ;
+				line-height: 14px ;
+				margin: 0px 0px 0px 0px ;
+			}
+		</style>
+
+		<div id="pre-bootstrap">
+			<div class="messaging">
+
+				<h1>
+					App is Loading
+				</h1>
+
+				<p>
+					Please stand by for your ticket to awesome-town!
+				</p>
+
+			</div>
+		</div>
+
+	</div>
+
+</body>
 </html>
