@@ -1,0 +1,40 @@
+//@import "./theme";
+//@import "../../mixins/_map-deep-get.less";
+//
+//.bg-one    {background: map-deep-get($theme, 'colours', 'one');}
+//.bg-two    {background: map-deep-get($theme, 'colours', 'two');}
+//.bg-three  {background: map-deep-get($theme, 'colours', 'three');}
+//
+//.radius-primary   {border-radius: map-deep-get($theme, 'border-radius', 'primary');}
+//.radius-secondary {border-radius: map-deep-get($theme, 'border-radius', 'secondary');}
+//.radius-tertiary  {border-radius: map-deep-get($theme, 'border-radius', 'tertiary');}
+//
+//.align-primary   {text-align: map-deep-get($theme, 'text-align', 'primary');}
+//.align-secondary {text-align: map-deep-get($theme, 'text-align', 'secondary');}
+//.align-tertiary  {text-align: map-deep-get($theme, 'text-align', 'tertiary');}
+//
+//.txt-primary    {color: map-deep-get($theme, 'colours', 'primary');}
+//.txt-secondary  {color: map-deep-get($theme, 'colours', 'secondary');}
+//.txt-tertiary   {color: map-deep-get($theme, 'colours', 'tertiary');}
+//.txt-white      {color: map-deep-get($theme, 'colours', 'light');}
+//.txt-black      {color: map-deep-get($theme, 'colours', 'dark');}
+//
+//.font-primary   {font-family: map-deep-get($theme, 'font', 'primary');}
+//.font-secondary {font-family: map-deep-get($theme, 'font', 'secondary');}
+//.font-tertiary  {font-family: map-deep-get($theme, 'font', 'tertiary');}
+//
+//.header_size-primary   {font-size: map-deep-get($theme, 'header-size', 'primary');}
+//.header_size-secondary {font-size: map-deep-get($theme, 'header-size', 'secondary');}
+//.header_size-tertiary  {font-size: map-deep-get($theme, 'header-size', 'tertiary');}
+//
+//.txt_size-primary   {font-size: map-deep-get($theme, 'txt-size', 'primary');}
+//.txt_size-secondary {font-size: map-deep-get($theme, 'txt-size', 'secondary');}
+//.txt_size-tertiary  {font-size: map-deep-get($theme, 'txt-size', 'tertiary');}
+//
+//.padding-primary   {padding: map-deep-get($theme, 'padding', 'primary');}
+//.padding-secondary {padding: map-deep-get($theme, 'padding', 'secondary');}
+//.padding-tertiary  {padding: map-deep-get($theme, 'padding', 'tertiary');}
+//
+//.line_height-primary   {line-height: map-deep-get($theme, 'line-height', 'primary');}
+//.line_height-secondary {line-height: map-deep-get($theme, 'line-height', 'secondary');}
+//.line_height-tertiary  {line-height: map-deep-get($theme, 'line-height', 'tertiary');}

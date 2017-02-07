@@ -6,7 +6,6 @@ import brandSettings = require('./settings/brands/coutts/settings');
 @Component({
     selector: 'app-root',
     templateUrl: './app/app.component.html',
-    styleUrls: ['./css/themes/' + globalSettings.brand + '/oocss.css'],
     encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
