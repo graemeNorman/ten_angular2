@@ -1,0 +1,22 @@
+[
+    {
+        "mod_name": "Dining",
+        "mod_switch": false
+    },
+    {
+        "mod_name": "Entertainment",
+        "mod_switch": true
+    },
+    {
+        "mod_name": "Travel",
+        "mod_switch": true
+    },
+    {
+        "mod_name": "Events",
+        "mod_switch": false
+    },
+    {
+        "mod_name": "Home",
+        "mod_switch": false
+    }
+]
