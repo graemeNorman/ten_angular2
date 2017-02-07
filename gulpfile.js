@@ -1,34 +1,39 @@
 'use strict';
 
 var gulp        = require('gulp'),
-    sass        = require('gulp-sass'),
-    sassglob    = require('gulp-sass-glob'),
     fs          = require('fs'),
-    jsonSass    = require('json-sass'),
     source      = require('vinyl-source-stream'),
     rename      = require('gulp-rename'),
     es          = require('event-stream'),
-    path        = require('path');
+    path        = require('path'),
+    less = require('gulp-less');
 // minifyCss   = require('gulp-minify-css'),
 // concat      = require('gulp-concat'),
 
 /* SASS DIRECTORY */
-var SCSS_SRC = ['assets/scss/**/**/*.scss', 'app/**/*.scss'];
+var LESS_SRC = ['assets/less/**/**/*.less', 'app/**/*.less'];
 
 /*
     CONCAT & MINIFY SASS
  */
-gulp.task('concatMinify', ['concatMinify:sass']);
-gulp.task('concatMinify:sass', function() {
-gulp.src(SCSS_SRC)
-    .pipe(sass().on('error', sass.logError))
-    .pipe(sassglob())
+gulp.task('concatMinify', ['concatMinify:less']);
+gulp.task('concatMinify:less', function() {
+gulp.src(LESS_SRC)
+    .pipe(less({
+      paths: [ path.join(__dirname, 'less', 'includes') ]
+    }))
     // .pipe(minifyCss())
     // .pipe(concat('style.css'))
     // .pipe(rename({
     //     basename : 'style',
     //     extname : '.min.css'
     // }))
+    .pipe(gulp.dest('./css/'))
+});
+
+gulp.task('test', function() {
+gulp.src('app/**/*.less')
+    .pipe(less())
     .pipe(gulp.dest('./css/'))
 });
 
