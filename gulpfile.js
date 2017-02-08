@@ -1,40 +1,38 @@
 'use strict';
 
-var gulp        = require('gulp'),
-    fs          = require('fs'),
-    source      = require('vinyl-source-stream'),
-    rename      = require('gulp-rename'),
-    es          = require('event-stream'),
-    path        = require('path'),
-    less        = require('gulp-less'),
-    util        = require('gulp-util'),
-    gulpJson    = require('gulp-json'),
-    jsonCss     = require('gulp-json-css'),
-    jeditor     = require("gulp-json-editor"),
-    helpers     = require("./helper"),
-    clean       = require('gulp-clean'),
-    runSequence = require('run-sequence');
+const   gulp        = require('gulp'),
+        fs          = require('fs'),
+        source      = require('vinyl-source-stream'),
+        rename      = require('gulp-rename'),
+        es          = require('event-stream'),
+        path        = require('path'),
+        less        = require('gulp-less'),
+        util        = require('gulp-util'),
+        gulpJson    = require('gulp-json'),
+        jsonCss     = require('gulp-json-css'),
+        jeditor     = require("gulp-json-editor"),
+        clean       = require('gulp-clean'),
+        runSequence = require('run-sequence'),
+        helpers     = require("./gulp/helper"),
+        variables = require("./gulp/variables");
 
-
-/* LESS DIRECTORY */
-var LESS_SRC = ['assets/less/**/**/*.less', 'app/**/*.less'];
 
 /*
  * Compile less file
  */
 gulp.task('less', function() {
-    gulp.src(LESS_SRC)
+    gulp.src(variables.LESS.src)
         .pipe(less({
           paths: [ path.join(__dirname, 'less', 'includes') ]
         }))
-        .pipe(gulp.dest('./css/'))
+        .pipe(gulp.dest(variables.LESS.dest))
 });
 
 /*
     Watchers
 */
 gulp.task('watch:less', function () {
-    gulp.watch(LESS_SRC, ['less']);
+    gulp.watch(variables.LESS.src, ['less']);
 });
 
 
@@ -45,7 +43,7 @@ gulp.task('watch:less', function () {
 gulp.task('prepareAPI', function(){
     var site = util.env.site;
     if (site) {
-        return gulp.src("config/api.json")
+        return gulp.src(variables.DEFAULT_API_JSON)
             .pipe(jeditor(function(json) {
                 json.theme = helpers.buildThemeApi(site);
                 json.settings = helpers.buildSettingApi(site);
@@ -67,7 +65,7 @@ gulp.task('createLess', function() {
         return gulp
             .src(['./config/'+site+'/theme.json'])
             .pipe(jsonCss({targetPre: 'less'}))
-            .pipe(gulp.dest('assets/less/'));
+            .pipe(gulp.dest(variables.LESS.assets));
         }
 });
 
@@ -95,7 +93,3 @@ gulp.task('cleanConfigDir', function() {
 gulp.task('make', function(callback) {
   runSequence('cleanConfigDir', 'prepareAPI', 'createLess', callback);
 });
-
-
-
-

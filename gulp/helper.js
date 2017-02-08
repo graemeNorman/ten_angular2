@@ -1,4 +1,3 @@
-var test = 'myVar';
 
 function buildThemeApi(site) {
     return "http://demo7313901.mockable.io/"+site+"/theme";
