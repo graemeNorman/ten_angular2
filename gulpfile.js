@@ -37,29 +37,28 @@ gulp.task('watch:less', function () {
     gulp.watch(LESS_SRC, ['concatMinify:less']);
 });
 
-gulp.task('api', function () {
-    gulp.src('api.json')
-      .pipe(gulpJson())
-      .pipe(gulp.dest('app/config'));
-});
-
-gulp.task('test', function() {
-  return gulp
-    .src(['app/config/theme.json'])
-    .pipe(jsonCss({targetPre: 'less'}))
-    .pipe(gulp.dest('app/config/'));
-});
-
-gulp.task('prepareConfig', function() {
-    console.log(util.env.site);
-    console.log(helpers.test);
-    return gulp.src("api.json")
-      .pipe(jeditor(function(json) {
-        json.v = "1.2.3";
-        return json; // must return JSON object.
-      }))
-      .pipe(gulp.dest("./"));
-});
+// gulp.task('api', function () {
+//     gulp.src('api.json')
+//       .pipe(gulpJson())
+//       .pipe(gulp.dest('app/config'));
+// });
+//
+// gulp.task('test', function() {
+//   return gulp
+//     .src(['app/config/theme.json'])
+//     .pipe(jsonCss({targetPre: 'less'}))
+//     .pipe(gulp.dest('app/config/'));
+// });
+//
+// gulp.task('prepareConfig', function() {
+//     console.log(util.env.site);
+//     console.log(helpers.test);
+//     return gulp.src("api.json")
+//       .pipe(jeditor(function(json) {
+//         return json;
+//       }))
+//       .pipe(gulp.dest("./"));
+// });
 
 
 /*******************************************/
