@@ -5,13 +5,14 @@ var gulp        = require('gulp'),
     source      = require('vinyl-source-stream'),
     rename      = require('gulp-rename'),
     es          = require('event-stream'),
-    path        = require('path'),
-    less        = require('gulp-less');
-// minifyCss   = require('gulp-minify-css'),
-// concat      = require('gulp-concat'),
+    path = require('path'),
+    less        = require('gulp-less'),
+    util        = require('gulp-util'),
+    gulpJson = require('gulp-json'),
+    jsonCss = require('gulp-json-css'),
+    jeditor = require("gulp-json-editor"),
+    helpers = require("./helper");
 
-var gulpJson = require('gulp-json');
-var jsonCss = require('gulp-json-css');
 
 /* SASS DIRECTORY */
 var LESS_SRC = ['assets/less/**/**/*.less', 'app/**/*.less'];
@@ -25,12 +26,6 @@ gulp.src(LESS_SRC)
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }))
-    // .pipe(minifyCss())
-    // .pipe(concat('style.css'))
-    // .pipe(rename({
-    //     basename : 'style',
-    //     extname : '.min.css'
-    // }))
     .pipe(gulp.dest('./css/'))
 });
 
@@ -55,6 +50,53 @@ gulp.task('test', function() {
     .pipe(gulp.dest('app/config/'));
 });
 
+gulp.task('prepareConfig', function() {
+    console.log(util.env.site);
+    console.log(helpers.test);
+    return gulp.src("api.json")
+      .pipe(jeditor(function(json) {
+        json.v = "1.2.3";
+        return json; // must return JSON object.
+      }))
+      .pipe(gulp.dest("./"));
+});
 
 
+/*******************************************/
+
+/*
+ * Prepare JSON object with API endpoint to get the theme and setting
+ */
+
+gulp.task('prepareAPI', function(){
+    var site = util.env.site;
+    console.log('prepareAPI ',site);
+    if (site) {
+        return gulp.src("config/api.json")
+          .pipe(jeditor(function(json) {
+            json.theme = helpers.buildThemeApi(site);
+            json.settings = helpers.buildSettingApi(site);
+            return json;
+          }))
+          .pipe(gulp.dest("./config/"+site+"/"))
+          .pipe(gulpJson())
+          .pipe(gulp.dest("./config/"+site+"/"));
+    }
+})
+
+/*
+ * Request theme using API defined in theme.json file and save it as less file
+ */
+
+gulp.task('createLess', function() {
+  var site = util.env.site;
+  console.log('createLess ',site);
+  if (site) {
+    return gulp
+        .src(['./config/'+site+'/theme.json'])
+        .pipe(jsonCss({targetPre: 'less'}))
+        .pipe(gulp.dest('assets/less/'));
+  }
+
+});
 
